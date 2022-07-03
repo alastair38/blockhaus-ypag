@@ -67,11 +67,61 @@ if ( ! function_exists( 'blockhaus_setup' ) ) {
       add_editor_style( 'styles/style.css' );
   
       remove_theme_support( 'core-block-patterns' );
+
+      add_filter( 'get_the_archive_title', function ($title) {
+        if ( is_category() ) {
+        $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+      } elseif ( is_tax() ) {
+        $title = 'Content by ' . single_tag_title( '', false );
+        } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+        } elseif (is_post_type_archive()) {
+          $title = post_type_archive_title('', false);
+      }
+        
+        return $title;
+       });
+
+              // Allow SVG
+      add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+
+        global $wp_version;
+        if ( $wp_version !== '4.7.1' ) {
+          return $data;
+        }
+
+        $filetype = wp_check_filetype( $filename, $mimes );
+
+        return [
+            'ext'             => $filetype['ext'],
+            'type'            => $filetype['type'],
+            'proper_filename' => $data['proper_filename']
+        ];
+
+      }, 10, 4 );
   
+    }
   }
-  }
+
   add_action( 'after_setup_theme', 'blockhaus_setup' );
   
+  function blockhaus_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+  }
+  add_filter( 'upload_mimes', 'blockhaus_mime_types' );
+  
+  function blockhaus_fix_svg() {
+    echo '<style type="text/css">
+          .attachment-266x266, .thumbnail img {
+               width: 100% !important;
+               height: auto !important;
+          }
+          </style>';
+  }
+  add_action( 'admin_head', 'blockhaus_fix_svg' );
   /**
    * Set the content width in pixels, based on the theme's design and stylesheet.
    *

@@ -10,14 +10,14 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main pt-20 lg:py-8">
+	<main id="primary" class="site-main pb-20">
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
 			// get_template_part( 'template-parts/content', 'page' );
-			get_template_part( 'template-parts/content', 'single-' . get_post_type() );
+			get_template_part( 'template-parts/content', 'single-post' );
 
 			the_post_navigation(
 				array(

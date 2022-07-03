@@ -6,13 +6,22 @@ module.exports = {
     './**/*.php',
     './js/*.js',
     './functions.php',
-    '../../plugins/blockhaus-functionality/includes/blocks/layouts/*.php',
+    '../../plugins/blockhaus-functionality/includes/blocks/**/*.php',
   ],
   theme: {
     fontFamily: {
       sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
+    },
+    fontSize: {
+      sm: 'var(--wp--preset--font-size--small)',
+      tiny: 'var(--wp--preset--font-size--tiny)',
+      base: 'var(--wp--preset--font-size--normal)',
+      lg: 'var(--wp--preset--font-size--large)',
+      xl: 'var(--wp--preset--font-size--extra-large)',
+      huge: 'var(--wp--preset--font-size--huge)',
+      gigantic: 'var(--wp--preset--font-size--gigantic)',
     },
     extend: {
       colors: {
@@ -49,6 +58,8 @@ module.exports = {
       gridTemplateColumns: {
         // Complex site-specific column configuration
         hero: '3fr 3rem 2fr',
+        header: 'auto 75% auto',
+        'header-mobile': 'auto 91.666667% auto',
       },
       typography: {
         DEFAULT: {

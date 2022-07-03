@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="p-6 w-11/12 md:w-3/4 bg-white rounded-md mx-auto space-y-6">
+<article id="post-<?php the_ID(); ?>" class="p-12 w-11/12 md:w-3/4 bg-white rounded-md mx-auto space-y-6">
 	<header class="entry-header">
 		<?php the_title( '<h1 class="has-gigantic-font-size font-black">', '</h1>' ); ?>
 		<?php blockhaus_post_thumbnail('full'); ?>

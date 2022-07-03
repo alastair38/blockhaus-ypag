@@ -180,4 +180,17 @@ function blockhaus_admin_bar_remove_logo() {
 }
 add_action( 'wp_before_admin_bar_render', 'blockhaus_admin_bar_remove_logo', 0 );
 
-  
+add_filter('manage_post_posts_columns', function($columns) {
+	$columns['author'] = __('Admin', 'blockhaus');
+	return $columns;
+});
+
+add_filter('manage_resource_posts_columns', function($columns) {
+	$columns['author'] = __('Admin', 'blockhaus');
+	return $columns;
+});
+
+add_filter('manage_story_posts_columns', function($columns) {
+	$columns['author'] = __('Admin', 'blockhaus');
+	return $columns;
+});

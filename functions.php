@@ -58,9 +58,9 @@ require get_template_directory() . '/inc/search.php';
 require get_template_directory() . '/inc/navigation.php';
 
 /**
- * Block patterns
+ * Block patterns - moved to functionality plugin
  */
-require get_template_directory() . '/inc/block-patterns.php';
+// require get_template_directory() . '/inc/block-patterns.php';
 
 /**
  * SEO

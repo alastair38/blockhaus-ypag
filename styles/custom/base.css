@@ -14,7 +14,7 @@ h6,
 }
 
 h1[contenteditable='true'] {
-  @apply text-5xl;
+  @apply text-gigantic;
 }
 
 [aria-current='page'] {
@@ -23,6 +23,10 @@ h1[contenteditable='true'] {
 
 main {
   @apply flex-auto grid;
+}
+
+.home footer#site-footer {
+  @apply mt-24;
 }
 
 ::-moz-selection {

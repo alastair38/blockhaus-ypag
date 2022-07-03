@@ -1,7 +1,7 @@
 /* SETTING SOME DEFAULTS FOR FIGURE / FIGCAPTION */
 
 p a {
-  @apply underline decoration-accent decoration-4;
+  @apply underline decoration-accent decoration-2;
 }
 
 address {

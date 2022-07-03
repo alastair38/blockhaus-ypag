@@ -11,8 +11,8 @@
 
 ?>
 
-	<footer id="colophon" class="px-6 pt-20 place-items-center bg-white">
-<div class="grid grid-cols-3 gap-20">
+<footer id="site-footer" class="px-6 pt-20 place-items-center bg-white">
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-20">
 
 
 <div class="p-6 rounded-md space-y-4">
