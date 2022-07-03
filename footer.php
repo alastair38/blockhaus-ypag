@@ -70,14 +70,13 @@ if( have_rows('details', 'option') ):?>
 		<?php // Do something...
 
 	// End loop.
-	endwhile; 
-else :
-	// Do something...
-endif;
-
-?>
+	endwhile; ?>	
 	</ul>
-	</div>
+</div>
+
+<?php else :
+endif; ?>
+
 <p class="flex justify-center p-6">
 		<?php
 				/* translators: 1: Theme name, 2: Theme author. */
