@@ -21,7 +21,7 @@ get_header();
 			$header_image = get_field(get_post_type() . '_header', 'options');
 			$transparent =  get_field(get_post_type() . '_page_transparent_header', 'options');
 
-			the_archive_title( '<h1 class="page-title z-0 mb-6 w-fit col-start-2 row-start-1 place-self-end justify-self-start bg-primary-default text-large md:text-gigantic px-6 font-black font-sans uppercase">', '</h1>' );
+			the_archive_title( '<h1 class="page-title z-0 mb-6 w-fit col-start-2 row-start-1 place-self-end justify-self-start bg-primary-default text-large md:text-gigantic px-6 font-black uppercase">', '</h1>' );
 			if($header_image):
 			if($transparent):?>
 			<img class="h-80 md:place-self-end col-span-full md:col-start-2 md:col-span-1 row-start-1 object-contain" src="<?php echo $header_image['url'];?>" alt="<?php echo $header_image['alt'];?>">

@@ -60,22 +60,6 @@ a.components-button.edit-post-fullscreen-mode-close svg {
   inset: 0;
 }
 
-.block-editor a.components-button.edit-post-fullscreen-mode-close {
-  background: url('/wp-content/themes/blockhaus/screenshot.png') #101f34;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.block-editor .edit-post-header :not(.dashboard-card.settings) a:hover,
-.block-editor .edit-post-header :not(.dashboard-card.settings) a:focus {
-  background: url('/wp-content/themes/blockhaus/screenshot.png') #101f34 !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: contain !important;
-  opacity: 0.85;
-}
-
 /* .wp-core-ui .button-primary {
   background-color: var(--wp--preset--color--secondary);
   border-color: currentColor;
@@ -254,5 +238,5 @@ li#wp-admin-bar-my-account .ab-item .display-name,
 }
 
 #wpbody-content #dashboard-widgets .postbox-container {
-  width: 100%;
+  width: 100% !important;
 }
