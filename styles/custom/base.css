@@ -14,7 +14,7 @@ h6,
 }
 
 h1[contenteditable='true'] {
-  @apply text-gigantic;
+  @apply text-gigantic leading-none;
 }
 
 [aria-current='page'] {
@@ -29,11 +29,15 @@ main {
   @apply mt-24;
 }
 
+article ul {
+  @apply list-disc list-inside;
+}
+
 ::-moz-selection {
   /* Code for Firefox */
-  @apply bg-green-400;
+  @apply bg-accent;
 }
 
 ::selection {
-  @apply bg-green-400;
+  @apply bg-accent;
 }

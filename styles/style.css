@@ -653,6 +653,7 @@ h1, h2, h3, h4, h5, h6, #site-navigation {
 
 h1[contenteditable='true'] {
   font-size: var(--wp--preset--font-size--gigantic);
+  line-height: 1;
 }
 
 [aria-current='page'] {
@@ -676,15 +677,18 @@ main {
   margin-top: 6rem;
 }
 
+article ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
 ::-moz-selection {
   /* Code for Firefox */
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+  background-color: var(--wp--preset--color--accent);
 }
 
 ::selection {
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+  background-color: var(--wp--preset--color--accent);
 }
 
 .container {
@@ -1788,10 +1792,6 @@ input[type='text'], input[type='email'], textarea {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-header {
-  grid-template-columns: auto 75% auto;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -2094,6 +2094,11 @@ input[type='text'], input[type='email'], textarea {
   padding-right: 0.75rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -2152,6 +2157,10 @@ input[type='text'], input[type='email'], textarea {
 
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.leading-none {
+  line-height: 1;
 }
 
 .text-white {
@@ -2296,6 +2305,10 @@ figcaption {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary-default:hover {
+  background-color: var(--wp--preset--color--primary-default);
 }
 
 .focus\:border-none:focus {

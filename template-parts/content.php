@@ -38,7 +38,7 @@
 
 	if(!has_post_thumbnail() && !is_post_type_archive('resource')):
 	$default_img = get_field(get_post_type() . '_header', 'options');
-	echo wp_get_attachment_image( $default_img['id'], 'landscape', "", array( 'class' => 'w-full aspect-[80/45]' ));
+	echo wp_get_attachment_image( $default_img['id'], 'landscape', "", array( 'class' => 'w-full aspect-[80/45] object-cover' ));
 	
 	endif;
 	?>
@@ -65,7 +65,7 @@
 		<?php endif;?>
 		
 		<?php if($external_link):?>
-			<a class="py-1 px-4 border border-current inline-flex items-center gap-2 mt-6 shadow-retro hover:bg-white transition-colors duration-200 bg-offset font-bold" 
+			<a class="py-1 px-4 border border-current inline-flex items-center gap-2 mt-6 shadow-retro hover:bg-primary-default transition-colors duration-200 bg-offset font-bold" 
 			href="<?php echo $external_link;?>" rel="external">View <?php echo get_post_type();?>
 
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -76,7 +76,7 @@
 
 		<?php else:?>
 
-			<a class="py-1 px-4 border border-current inline-flex mt-6 shadow-retro hover:bg-white transition-colors duration-200 bg-offset font-bold" 
+			<a class="py-1 px-4 border border-current inline-flex mt-6 shadow-retro hover:bg-primary-default transition-colors duration-200 bg-offset font-bold" 
 			href="<?php echo esc_url( get_permalink() );?>" rel="bookmark">View <?php echo get_post_type();?></a>
 
 		<?php endif;?>
