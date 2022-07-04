@@ -9,9 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="p-6 flex flex-col has-neutral-light-100-background-color rounded-md shadow-md gap-6">
+<article id="post-<?php the_ID(); ?>" class="relative p-6 flex flex-col has-neutral-light-100-background-color rounded-md shadow-md gap-6">
 	<header class="entry-header">
 		<?php
+
+		if( strtotime( $post->post_date ) > strtotime('-7 day') ) {
+			echo '<span aria-label="New content" class="flex w-fit mb-3 text-sm bg-accent px-2 rounded-full">new</span>';
+		}
+
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
@@ -26,7 +31,12 @@
 				blockhaus_posted_by();
 				?>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php endif; 
+
+
+
+		
+		?>
 	</header><!-- .entry-header -->
 
 	<?php 
@@ -38,12 +48,15 @@
 
 	if(!has_post_thumbnail() && !is_post_type_archive('resource')):
 	$default_img = get_field(get_post_type() . '_header', 'options');
-	echo wp_get_attachment_image( $default_img['id'], 'landscape', "", array( 'class' => 'w-full aspect-[80/45] object-cover' ));
+	echo wp_get_attachment_image( $default_img['id'], 'landscape', "", array( 'class' => 'w-full aspect-[80/45] object-contain' ));
 	
 	endif;
 	?>
 	<div class="entry-content">
 		<?php
+
+		
+
 		if ( has_excerpt() ) {
 			echo '<div class="text-sm">';
 			the_excerpt();#
@@ -55,7 +68,7 @@
 
 	<footer class="mt-auto">
 
-		<?php 
+		<?php
 		
 		$external_link = get_field('external_link');
 		$external_site = get_field('external_site');?>
