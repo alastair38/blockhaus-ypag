@@ -35,7 +35,7 @@ get_header();
 				<?php 
 				if($header_image):
 				if($transparent): ?>
-				<img class="h-80 md:place-self-end col-span-full md:col-start-2 md:col-span-1 row-start-1 object-contain" src="<?php echo $header_image['url'];?>" alt="<?php echo $header_image['alt'];?>">
+				<img class="h-80 md:place-self-end col-span-full md:col-start-2 md:col-span-1 row-start-1 object-contain object-right" src="<?php echo $header_image['url'];?>" alt="<?php echo $header_image['alt'];?>">
 				<?php else: ?>
 				
 				<img class="h-80 w-full col-span-full row-start-1 object-cover" src="<?php echo $header_image['url'];?>" alt="<?php echo $header_image['alt'];?>">
