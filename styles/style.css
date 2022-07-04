@@ -2322,13 +2322,13 @@ figcaption {
   background-color: var(--wp--preset--color--neutral-light-500);
 }
 
+.hover\:bg-primary-default:hover {
+  background-color: var(--wp--preset--color--primary-default);
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-primary-default:hover {
-  background-color: var(--wp--preset--color--primary-default);
 }
 
 .focus\:border-none:focus {

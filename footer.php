@@ -11,11 +11,11 @@
 
 ?>
 
-<footer id="site-footer" class="px-6 pt-20 place-items-center bg-white">
-<div class="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-20">
+<footer id="site-footer" class="px-6 pt-20 place-items-center bg-primary-default">
+<div class="">
 
 
-<div class="p-6 rounded-md space-y-4">
+<!-- <div class="p-6 rounded-md space-y-4">
 	<p class="px-2 -rotate-1 bg-accent w-fit">Main links</p>
 	<?php
 			wp_nav_menu(
@@ -26,15 +26,15 @@
 				)
 			);
 			?>
-</div>
+</div> -->
 
-<div class="p-6 rounded-md space-y-4">
+<!-- <div class="p-6 rounded-md space-y-4">
 	
 	<p class="px-2 -rotate-1 bg-accent w-fit">Address</p>
-	<?php echo blockhaus_display_address(); ?>
-</div>
+	<?php // echo blockhaus_display_address(); ?>
+</div> -->
 
-<div class="p-6 rounded-md space-y-4">
+<div class="p-6 rounded-md space-y-4 w-fit mx-auto flex flex-col justify-center items-center">
 	<p class="px-2 -rotate-1 bg-accent w-fit">Follow us</p>
   <?php echo blockhaus_display_social_profiles();?>
 </div>
